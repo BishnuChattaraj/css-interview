@@ -1,0 +1,142 @@
+.box1{
+    border: 2px solid black;
+    width:100px;
+    height: 100px;
+    background-color:violet;
+    transition: 2s all;
+    transition-delay: 3s;
+    transition-timing-function: ease-in;
+}
+.box1:hover {
+    background-color: yellowgreen;
+    width:200px;
+    height:200px;
+}
+.box2{
+    border: 2px solid black;
+    width:100px;
+    height: 100px;
+    background-color:violet;
+   animation:transform 2s infinite;
+}
+@keyframes transform{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.grid{
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    border: 2px solid black;
+    background-color:yellowgreen;
+    grid-gap:5px 5px;
+
+}
+.item1{
+    grid-column: 1/4;
+    background-color: aqua;
+    border:2px solid black;
+    margin: 5px;
+    text-align: center;
+    font-size: 30px;
+    
+}
+.item2{
+    grid-column: 1/2;
+    background-color: aquamarine;
+    border: 2px solid black;
+    margin: 5px;
+    text-align: center;
+    font-size: 30px;
+   
+}
+.item3{
+    grid-column: 1/2;
+    background-color: bisque;
+    margin: 5px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 30px;
+}
+.item4{
+    grid-column: 1/2;
+    background-color: aliceblue;
+    margin: 5px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 30px;
+}
+.item5{
+    grid-column: 1/4;
+    background-color:brown;
+    margin: 5px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+
+
+/*combinators*/
+
+/* 1. descendent-selector*/
+
+div p {
+    background-color: red;
+
+}
+
+/* 2. child-selector*/
+
+div > p {
+    background-color: blue;
+}
+
+/* 3.adjacent-sibling-selector*/
+
+div + p {
+    background-color:green;
+}
+
+/* 3.general-sibling-selector*/
+
+div ~ p {
+    background-color:yellow;
+}
+
+
+/*pseudo selector*/
+
+/*hover*/
+.item1:hover{
+    background-color: blueviolet;
+}
+
+/*visited*/
+a:visited{
+    color: peru;
+}
+
+/*link*/
+a{
+    color: red;
+}
+
+/*active*/
+a:active{
+    color: gray;
+}
+
+/*first child*/
+p:first-child{
+    color: mediumseagreen;
+}
